@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign Up</title>
+    <style media="screen">
+      fieldset{
+        display: inline-block;
+        border-width: 4px;
+      }
+      #tbox:focus{
+        transform-origin: center;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <fieldset>
+      <legend><%= wrongInputS %></legend>
+      <form class="" action="/complete" method="post">
+        <label for="">Name</label><br>
+        <input type="text" id="tbox" name="name" placeholder="Name" autocomplete="off" value=""><br>
+        <label for="">E-Mail</label><br>
+        <input type="email" id="tbox" name="email" placeholder="Email" autocomplete="off" value=""><br>
+        <label for="">Phone Number</label><br>
+        <input type="text" id="tbox" name="number" placeholder="Number" autocomplete="off" value=""><br>
+        <label for="">Username</label><br>
+        <input type="text" id="tbox" name="username" placeholder="Username" autocomplete="off" value=""><br>
+        <label for="">password</label><br>
+        <input type="password" id="tbox" name="password" placeholder="Password" autocomplete="off" value=""><br>
+        <input type="submit" name="" value="Sign Up">
+      </form>
+    </fieldset>
+
+  </body>
+</html>

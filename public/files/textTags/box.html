@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: black;
+      color: white;
+      text-align: center;
+      font-family: sans-serif;
+    }
+
+
+    .boxModel {
+      display: inline-block;
+      margin: 10px;
+      margin-right: 400px;
+      height: 200px;
+      width: 200px;
+      border: 5px solid pink;
+      padding: 10px;
+    }
+
+    .content {
+      margin: auto;
+      height: 100px;
+      width: 100px;
+      font-size: 16px;
+    }
+
+    .main {
+      float: left;
+      display: inline-block;
+    }
+
+    ul {
+      text-align: left;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .uli {
+      font-size: 2rem;
+      margin: 20px;
+    }
+
+    ul li ul li {
+      font-size: 1.5rem;
+    }
+
+    input {
+      border: 2px solid white;
+      background: #171717;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 30px;
+      transition: 300ms;
+      outline: none;
+    }
+
+    input[type=button]:hover {
+      background: white;
+      color: black;
+      transform: scale(1.1);
+    }
+    .contentp {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 30px;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #39A2DB;
+    }
+
+        .wholeNav {
+          position: fixed;
+          bottom: 30px;
+          left: 30px;
+          text-align: left;
+          z-index: 1;
+        }
+
+        #navBar {
+          position: absolute;
+          visibility: hidden;
+        }
+
+        nav label {
+          font-size: 1.5rem;
+          transition: 200ms;
+        }
+
+        nav label:hover {
+          color: #39A2DB;
+          transform: scale(1.3);
+        }
+
+        #navBar:checked~.navWindow {
+          visibility: visible;
+        }
+
+        .navWindow {
+          position: absolute;
+          background: #ffffff30;
+          visibility: hidden;
+          width: 700px;
+          height: 50px;
+          margin-top: 0;
+          top: -10px;
+          left: 50px;
+          margin-left: 5px;
+          border-top-right-radius: 7px;
+          border-bottom-right-radius: 7px;
+          padding-left: 10px;
+        }
+
+        nav ul {
+          display: inline-block;
+          list-style: none;
+          font-size: 2rem;
+          line-height: 1;
+        }
+
+        nav li {
+          margin-top: 10px;
+          display: inline-block;
+          margin-left: 10px;
+        }
+
+        nav a {
+          text-decoration: none;
+          color: white;
+          transition: 300ms;
+        }
+
+        nav a:hover {
+          color: #39A2DB;
+        }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <nav class="wholeNav">
+    <input id="navBar" class="navBar" type="checkbox" name="" value="">
+    <label for="navBar" class="fas fa-bars"></label>
+    <div class="navWindow">
+      <ul>
+        <li> <a href="forms.html">Forms</a> </li>
+        <li><a href="box.html">Box Model</a></li>
+        <li><a href="textTags.html">Text Tags</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="main">
+    <h1 style="font-size:3rem;">Box Model</h1>
+    <p class="contentp" style="margin-top:20px;">Box model consist of <br>4 things shown below </p>
+    <table>
+      <tr>
+        <td>
+          <ul>
+
+            <li class="uli">Content <br>
+              <ul>
+                <li>Font-Weight
+                  <input type="text" class="fontWeight" value="">
+                </li>
+                <li>Font-Color
+                  <input type="text" class="fontColor" value="">
+                </li>
+                <li>Font-Size
+                  <input type="text" class="fontSize" value="">
+                </li>
+                <li>Font-Family
+                  <input type="text" class="fontFamily" value="">
+                  <input type="button" name="" value="Apply" class="contentButton">
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li class="uli">Padding <br>
+              <ul>
+                <li>Padding-Top
+                  <input type="text" class="paddingTop" value="">
+                </li>
+                <li>Padding-Right
+                  <input type="text" class="paddingRight" value="">
+                </li>
+                <li>Padding-Bottom
+                  <input type="text" class="paddingBottom" value="">
+                </li>
+                <li>Padding-Left
+                  <input type="text" class="paddingLeft" value="">
+                  <input type="button" name="" value="Apply" class="paddingButton">
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul>
+            <li class="brdr uli">Border <br>
+              <ul>
+                <li>Border-Width
+                  <input type="text" class="borderWidth" value="">
+                </li>
+                <li>Border-Style
+                  <input type="text" class="borderStyle" value="">
+                </li>
+                <li>Border-Color
+                  <input type="text" class="borderColor" value="">
+                </li>
+                <li>Border-Radius
+                  <input type="text" class="borderRadius" value="">
+                  <input type="button" name="" value="Apply" class="borderButton">
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li class="mrgn uli">Margin <br>
+              <ul>
+                <li>Margin-Top
+                  <input type="text" class="marginTop" value="">
+                </li>
+                <li>Margin-Right
+                  <input type="text" class="marginRight" value="">
+                </li>
+                <li>Margin-Bottom
+                  <input type="text" class="marginBottom" value="">
+                </li>
+                <li>Margin-Left
+                  <input type="text" class="marginLeft" value="">
+                  <input type="button" name="" value="Apply" class="marginButton">
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="boxModel">
+    <div class="content">
+      Content
+    </div>
+  </div>
+  <script type="text/javascript">
+    document.querySelector(".contentButton").addEventListener("click", function() {
+      let weight = document.querySelector(".fontWeight").value;
+      let color = document.querySelector(".fontColor").value;
+      let size = document.querySelector(".fontSize").value;
+      let family = document.querySelector(".fontFamily").value;
+      document.querySelector(".content").style.fontWeight = weight;
+      document.querySelector(".content").style.color = color;
+      document.querySelector(".content").style.fontSize = size + "px";
+      document.querySelector(".content").style.fontFamily = family;
+    })
+    document.querySelector(".paddingButton").addEventListener("click", function() {
+      let top = document.querySelector(".paddingTop").value;
+      let right = document.querySelector(".paddingRight").value;
+      let bottom = document.querySelector(".paddingBottom").value;
+      let left = document.querySelector(".paddingLeft").value;
+      document.querySelector(".boxModel").style.paddingTop = top + "px";
+      document.querySelector(".boxModel").style.paddingRight = right + "px";
+      document.querySelector(".boxModel").style.paddingBottom = bottom + "px";
+      document.querySelector(".boxModel").style.paddingLeft = left + "px";
+    })
+    document.querySelector(".borderButton").addEventListener("click", function() {
+      let width = document.querySelector(".borderWidth").value;
+      let style = document.querySelector(".borderStyle").value;
+      let color = document.querySelector(".borderColor").value;
+      let radius = document.querySelector(".borderRadius").value;
+      document.querySelector(".boxModel").style.borderWidth = width + "px";
+      document.querySelector(".boxModel").style.borderStyle = style;
+      document.querySelector(".boxModel").style.borderColor = color;
+      document.querySelector(".boxModel").style.borderRadius = radius + "%";
+    })
+    document.querySelector(".marginButton").addEventListener("click", function() {
+      let top = document.querySelector(".marginTop").value;
+      let right = document.querySelector(".marginRight").value;
+      let bottom = document.querySelector(".marginBottom").value;
+      let left = document.querySelector(".marginLeft").value;
+      document.querySelector(".boxModel").style.marginTop = top + "px";
+      document.querySelector(".boxModel").style.marginRight = right + "px";
+      document.querySelector(".boxModel").style.marginBottom = bottom + "px";
+      document.querySelector(".boxModel").style.marginLeft = left + "px";
+    })
+  </script>
+</body>
+
+</html>

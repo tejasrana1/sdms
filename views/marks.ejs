@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Marks</title>
+    <style media="screen">
+      td,th{
+        padding-right: 10px;
+      }
+      table{
+        border:3px solid #022E57;
+      }
+      th{
+        color: #022E57;
+      }
+      td,tr{
+        border:none;
+      }
+      table{
+        text-align: center;
+      }
+      #tbox:focus{
+        transform-origin: center;
+      }
+      .fa{
+        color: #022E57;
+        font-size: 5rem;
+        position: absolute;
+        bottom: 20px;
+        left: 10px;
+        animation: move 5s linear infinite;
+      }
+      .blon{
+        position: fixed;
+        z-index: -1;
+        top: 100px;
+        opacity: 0.9;
+      }
+      .blon1{
+        right: 840px;
+      }
+      #tbox, #tsub{
+        background:inherit;
+      }
+      @keyframes move {
+        0%{
+          transform:translateX(0);
+        }
+        50%{
+          transform:translateX(710px);
+
+        }
+        100%{
+          transform:translateX(1420px);
+        }
+      }
+      .logout{
+        position: fixed;
+        top: 30px;
+        right: 20px;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <table border=1>
+      <tr style="background: #C0FEFC;">
+        <th>Subject</th>
+        <th>Obtained Marks</th>
+        <th>Total Marks</th>
+        <th>Description</th>
+      </tr>
+      <% marks.forEach(function(m){ %>
+      <% if(m.subject!==null||m.subject!==""){%>
+
+        <tr>
+          <td><%= m.subject %></td>
+          <td><%= m.om %></td>
+          <td><%= m.tm %></td>
+          <td><%= m.description %></td>
+          </tr>
+          <% }%>
+     <% }) %>
+     </table>
+     <form class="logout" action="/" method="get">
+       <input type="submit" name="" value="Log Out">
+     </form>
+     <fieldset style="border:4px solid #022E57;display:inline-block;position:absolute;top:7px;left:580px;">
+       <legend>Enter Marks</legend>
+    <form class="" action="/marks" method="post">
+      <label for="">Subject</label><br>
+      <input id="tbox" type="text" name="subject" value="" autocomplete="off" required><br>
+      <label for="">Obtained Marks</label><br>
+      <input id="tbox" type="text"  name="om" value="" autocomplete="off" required><br>
+      <label for="">Total Marks</label><br>
+      <input id="tbox" type="text" name="tm" value="" autocomplete="off" required><br>
+      <label for="">Description</label><br>
+      <input id="tbox" type="text" name="description" value="" autocomplete="off" required><br>
+      <input type="hidden" name="name" value="<%= getName %>">
+      <input id="tsub" type="submit" name="" value="Add">
+    </form>
+  </fieldset>
+  <img src="hot-air-balloon2.png" class="blon blon1" alt="">
+  <img src="hot-air-balloon.png"  class="blon blon2" alt="">
+  <i class="fa fa-solid fa-truck-monster"></i>
+  <script src="https://kit.fontawesome.com/d96147573c.js" crossorigin="anonymous"></script>
+  </body>
+</html>

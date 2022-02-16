@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style media="screen">
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome <%= name %></h1>
+      <form class="" action="/marks" method="post">
+        <input type="hidden" name="name" value="<%= name %>">
+        <input type="submit" name="" value="Marks">
+      </form>
+      <form class="" action="/chat" method="post">
+        <input type="hidden" name="name" value="<%= name %>">
+        <input type="submit" name="" value="Messages">
+      </form>
+      <input type="button" onclick="clcked()" name="" value="HTML / CSS">
+      <form class="" action="/" method="get">
+        <input type="submit" name="" value="Log Out">
+      </form>
+    </div>
+    <div class="webp" id="wrap">
+      <iframe src="files/textTags/textTags.html" id="frame" title="description"></iframe>
+    </div>
+    <script type="text/javascript">
+      function clcked()
+      {
+        document.querySelector('.container').classList.toggle("clicked");
+        document.querySelector('.webp').classList.toggle("clicked");
+      }
+    </script>
+  </body>
+</html>

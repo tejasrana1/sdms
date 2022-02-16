@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Chat</title>
+    <style media="screen">
+    th{
+      color: #022E57;
+    }
+    .msgs{
+      position: fixed;
+      bottom: 10px;
+    }
+    table{
+      margin-bottom: 100px;
+    }
+    .castle{
+      position: fixed;
+      top: 100px;
+      right: 450px;
+      background-attachment: fixed;
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+    .logout{
+      position: fixed;
+      top: 30px;
+      right: 20px;
+    }
+    #tbox{
+      transform: scale(1);
+    }
+    </style>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <table>
+    <% message.forEach(function(m){ %>
+
+          <tr>
+            <th><%= m.name %></th>
+            <td><%= m.message %></td>
+          </tr>
+
+     <% }) %>
+     </table>
+     <form class="logout" action="/" method="get">
+       <input type="submit" name="" value="Log Out">
+     </form>
+    <form class="" action="/chat" method="post">
+      <input type="hidden" name="cname" value="<%= name %>">
+      <div class="msgs">
+        <input type="text" id="tbox" style="width:300px;" name="msg" value="" placeholder="Type Your messages here..." autocomplete="off">
+        <input style="height:50px;" type="submit" name="" value="Post">
+      </div>
+    </form>
+    <img src="sand-castle.png" class="castle" alt="">
+  </body>
+</html>

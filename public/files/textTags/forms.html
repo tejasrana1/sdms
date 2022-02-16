@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Forms</title>
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: black;
+      color: white;
+      text-align: center;
+      font-family: sans-serif;
+    }
+
+    .wholeNav {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      text-align: left;
+      z-index: 1;
+    }
+
+    #navBar {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    nav label {
+      font-size: 1.5rem;
+      transition: 200ms;
+    }
+
+    nav label:hover {
+      color: #78DEC7;
+      transform: scale(1.3);
+    }
+
+    #navBar:checked~.navWindow {
+      visibility: visible;
+    }
+
+    .navWindow {
+      position: absolute;
+      background: #ffffff30;
+      visibility: hidden;
+      width: 700px;
+      height: 50px;
+      margin-top: 0;
+      top: -10px;
+      left: 50px;
+      margin-left: 5px;
+      border-top-right-radius: 7px;
+      border-bottom-right-radius: 7px;
+      padding-left: 10px;
+    }
+
+    nav ul {
+      display: inline-block;
+      list-style: none;
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    nav li {
+      margin-top: 10px;
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      transition: 300ms;
+    }
+
+    nav a:hover {
+      color: #78DEC7;
+    }
+
+    fieldset {
+      transition: 1.4s;
+      width: 300px;
+      margin: auto;
+    }
+
+    .vanish {
+      transform: translate(100px, 100px) scale(0);
+    }
+
+
+    .vis {
+      transform: scale(0);
+      transform-origin: center;
+    }
+
+    .thinair {
+      transition: 800ms;
+      position: absolute;
+      top: 230px;
+      left: 10px;
+      color: #78DEC7;
+      font-size: 3rem;
+    }
+
+    form label:hover {
+      color: pink;
+      transform: scale(2);
+    }
+
+    form input {
+      background: black;
+      border: 3px solid white;
+      border-radius: 40px;
+      color: white;
+      padding: 10px 20px;
+      outline: none;
+      margin: 5px;
+      transition: 200ms;
+      text-align: center;
+    }
+
+    form input[type=text]:focus,
+    form input[type=email]:focus,
+    form input[type=password]:focus {
+      transform: scaleX(1.05);
+    }
+
+    form input[type=button]:hover {
+      background: white;
+      border-color: #78DEC7;
+      color: black;
+      transform: scale(1.1);
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <nav class="wholeNav">
+    <input id="navBar" class="navBar" type="checkbox" name="" value="">
+    <label for="navBar" class="fas fa-bars"></label>
+    <div class="navWindow">
+      <ul>
+        <li> <a href="forms.html">Forms</a> </li>
+        <li><a href="box.html">Box Model</a></li>
+        <li><a href="textTags.html">Text Tags</a></li>
+      </ul>
+    </div>
+  </nav>
+  <h2 class="thinair vis">Everything Vanished in thin air...</h2>
+  <fieldset>
+    <legend>
+      <h1>Form</h1>
+    </legend>
+    <form class="" action="index.html" method="post">
+      <label for="">Textbox</label><br>
+      <input type="text" value="" placeholder="<input type='text'>"><br>
+      <label for="">Date</label><br>
+      <input type="date"><br>
+      <label for="">Color</label><br>
+      <input type="color"><br>
+      <label for="">Checkbox</label><br>
+      <input type="checkbox"><br>
+      <label for="">Radio</label><br>
+      <input type="radio"><br>
+      <label for="">Email</label><br>
+      <input type="email" placeholder="E-mail"><br>
+      <label for="">Password</label><br>
+      <input type="password" placeholder="Password"><br>
+      <input type="button" value="Submit" onclick="cliked()"><br>
+    </form>
+  </fieldset>
+
+  <script type="text/javascript">
+    function cliked() {
+      document.querySelector("fieldset").classList.add("vanish");
+      setTimeout(function() {
+        document.querySelector(".thinair").classList.remove("vis");
+      }, 1000)
+    }
+  </script>
+</body>
+
+</html>

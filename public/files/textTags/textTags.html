@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Text Tags</title>
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: black;
+      color: white;
+      text-align: center;
+      font-family: sans-serif;
+    }
+
+    .wholeNav {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      text-align: left;
+      z-index: 1;
+    }
+
+    #navBar {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    nav label {
+      font-size: 1.5rem;
+      transition: 200ms;
+    }
+
+    nav label:hover {
+      color: #39A2DB;
+      transform: scale(1.3);
+    }
+
+    #navBar:checked~.navWindow {
+      visibility: visible;
+    }
+
+    .navWindow {
+      position: absolute;
+      background: #ffffff30;
+      visibility: hidden;
+      width: 700px;
+      height: 50px;
+      margin-top: 0;
+      top: -10px;
+      left: 50px;
+      margin-left: 5px;
+      border-top-right-radius: 7px;
+      border-bottom-right-radius: 7px;
+      padding-left: 10px;
+    }
+
+    nav ul {
+      display: inline-block;
+      list-style: none;
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    nav li {
+      margin-top: 10px;
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      transition: 300ms;
+    }
+
+    nav a:hover {
+      color: #39A2DB;
+    }
+
+    .wholeNav {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      text-align: left;
+      z-index: 1;
+    }
+
+    #navBar {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    nav label {
+      font-size: 1.5rem;
+      transition: 200ms;
+    }
+
+    nav label:hover {
+      color: #39A2DB;
+      transform: scale(1.3);
+    }
+
+    #navBar:checked~.navWindow {
+      visibility: visible;
+    }
+
+    .navWindow {
+      position: absolute;
+      background: #ffffff30;
+      visibility: hidden;
+      width: 700px;
+      height: 50px;
+      margin-top: 0;
+      top: -10px;
+      left: 50px;
+      margin-left: 5px;
+      border-top-right-radius: 7px;
+      border-bottom-right-radius: 7px;
+      padding-left: 10px;
+    }
+
+    nav ul {
+      display: inline-block;
+      list-style: none;
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    nav li {
+      margin-top: 10px;
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      transition: 300ms;
+    }
+
+    nav a:hover {
+      color: #39A2DB;
+    }
+
+    .all {
+      margin: auto;
+      width: 500px;
+    }
+
+    .content {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 30px;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #39A2DB;
+    }
+
+    .headingDiv,
+    .para {
+      margin: auto;
+    }
+
+    .h {
+      position: absolute;
+    }
+
+    .h1 {
+      visibility: hidden;
+      top: 0;
+    }
+
+    .h2 {
+      visibility: hidden;
+      top: 7px;
+    }
+
+    .h3 {
+      visibility: hidden;
+      top: 12px;
+    }
+
+    .h4 {
+      visibility: hidden;
+      top: 14px;
+    }
+
+    .h5 {
+      visibility: hidden;
+      top: 15px;
+    }
+
+    .h6 {
+      visibility: hidden;
+      top: 16px;
+    }
+
+    .b {
+      border: 2px solid white;
+      background: #171717;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 30px;
+      transition: 300ms;
+      outline: none;
+      margin: 10px;
+    }
+
+    .b:hover {
+      background: white;
+      color: black;
+      transform: scale(1.1);
+    }
+
+    .active {
+      visibility: visible;
+    }
+
+    .headingDiv {
+      margin: 30px;
+      margin-bottom: 0;
+      left: 70px;
+      height: 80px;
+      position: relative;
+    }
+
+    .strem {
+      margin-top: 100px;
+      position: relative;
+    }
+
+    .bold:hover {
+      font-weight: bolder;
+    }
+
+    .em:hover {
+      font-style: italic;
+    }
+
+    span {
+      cursor: none;
+    }
+
+    .paragraph {
+      height: 50px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <nav class="wholeNav">
+    <input id="navBar" class="navBar" type="checkbox" name="" value="">
+    <label for="navBar" class="fas fa-bars"></label>
+    <div class="navWindow">
+      <ul>
+        <li> <a href="forms.html">Forms</a> </li>
+        <li><a href="box.html">Box Model</a></li>
+        <li><a href="textTags.html">Text Tags</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="all">
+
+    <h1 class="head">Text Tags</h1>
+    <p class="content">Below are the different heading levels. (Click on the buttons to view)</p>
+    <div class="headingDiv">
+      <h1 class="h h1">This is rank 1 heading</h1>
+      <h2 class="h h2">This is rank 2 heading</h2>
+      <h3 class="h h3">This is rank 3 heading</h3>
+      <h4 class="h h4">This is rank 4 heading</h4>
+      <h5 class="h h5">This is rank 5 heading</h5>
+      <h6 class="h h6">This is rank 6 heading</h6>
+    </div>
+    <input type="button" class="b1 b" value="<h1></h1>">
+    <input type="button" class="b2 b" value="<h2></h2>">
+    <input type="button" class="b3 b" value="<h3></h3>"><br>
+    <input type="button" class="b4 b" value="<h4></h4>">
+    <input type="button" class="b5 b" value="<h5></h5>">
+    <input type="button" class="b6 b" value="<h6></h6>">
+    <p class="content">Below is a paragraph.</p>
+    <div class="paragraph">
+      <p><span class="para"></span></p>
+    </div>
+    <p class="strem"><span class="bold">Hover</span> <span class="bold">over</span> <span class="bold">me</span> <span class="bold">to</span> <span class="bold">make</span> <span class="bold">me</span> <span class="bold">strong</span><br>
+      <span class="em">Hover</span> <span class="em">over</span> <span class="em">me</span> <span class="em">to</span> <span class="em">make</span> <span class="em">me</span> <span class="em">emphasize</span>
+    </p>
+  </div>
+  <script type="text/javascript">
+    document.querySelector(".b1").addEventListener("click", function() {
+      document.querySelector(".h1").classList.add("active");
+      document.querySelector(".h2").classList.remove("active");
+      document.querySelector(".h3").classList.remove("active");
+      document.querySelector(".h4").classList.remove("active");
+      document.querySelector(".h5").classList.remove("active");
+      document.querySelector(".h6").classList.remove("active");
+    })
+    document.querySelector(".b2").addEventListener("click", function() {
+      document.querySelector(".h2").classList.add("active");
+      document.querySelector(".h1").classList.remove("active");
+      document.querySelector(".h3").classList.remove("active");
+      document.querySelector(".h4").classList.remove("active");
+      document.querySelector(".h5").classList.remove("active");
+      document.querySelector(".h6").classList.remove("active");
+    })
+    document.querySelector(".b3").addEventListener("click", function() {
+      document.querySelector(".h3").classList.add("active");
+      document.querySelector(".h2").classList.remove("active");
+      document.querySelector(".h1").classList.remove("active");
+      document.querySelector(".h4").classList.remove("active");
+      document.querySelector(".h5").classList.remove("active");
+      document.querySelector(".h6").classList.remove("active");
+    })
+    document.querySelector(".b4").addEventListener("click", function() {
+      document.querySelector(".h4").classList.add("active");
+      document.querySelector(".h2").classList.remove("active");
+      document.querySelector(".h3").classList.remove("active");
+      document.querySelector(".h1").classList.remove("active");
+      document.querySelector(".h5").classList.remove("active");
+      document.querySelector(".h6").classList.remove("active");
+    })
+    document.querySelector(".b5").addEventListener("click", function() {
+      document.querySelector(".h5").classList.add("active");
+      document.querySelector(".h2").classList.remove("active");
+      document.querySelector(".h3").classList.remove("active");
+      document.querySelector(".h4").classList.remove("active");
+      document.querySelector(".h1").classList.remove("active");
+      document.querySelector(".h6").classList.remove("active");
+    })
+    document.querySelector(".b6").addEventListener("click", function() {
+      document.querySelector(".h6").classList.add("active");
+      document.querySelector(".h2").classList.remove("active");
+      document.querySelector(".h3").classList.remove("active");
+      document.querySelector(".h4").classList.remove("active");
+      document.querySelector(".h5").classList.remove("active");
+      document.querySelector(".h1").classList.remove("active");
+    })
+  </script>
+  <script src="index.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    ityped.init(document.querySelector('.para'), {
+      showCursor: false,
+      typeSpeed: 20,
+      backSpeed: 20,
+      strings: [
+        '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+      ]
+    });
+  </script>
+</body>
+
+</html>
